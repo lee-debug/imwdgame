@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>imwd</title>
+	<style type="text/css">
+	body {
+		background-color: black;
+		font-family: monospace;
+		color: #ead9d7;
+	}
+	#container {
+		width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding: 20px;
+		background-color: #1e1817
+	}
+	iframe {
+		border: 0;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	h1 {
+		font-size: 32px;
+	}
+	p {
+		font-size: 16px;
+	}
+	hr {
+		border: 0px;
+		height: 1px;
+		background-color: #3e3837;
+	}
+	.quote {
+		padding-left: 30px;
+	}
+	</style>
+</head>
+<body>
+<div id="container">
+	<iframe id="game_frame" src="game_frame.html" width="960px" height="540px" allowtransparency="true"></iframe>
+	<script type="text/javascript">
+		//force-focus the iframe 50ms after load;
+		//gives the browser time to put something there to focus
+		window.addEventListener("load", function() {
+			setTimeout(function () {
+				document.getElementById("game_frame").contentWindow.focus();
+			}, 50);
+		});
+	</script>
+	<h1 align="center">imwd - an interactive web framework</h1>
+	<hr>
+	<p>What is it?</p>
+	<hr>
+	<div class="quote">
+		<p>imwd is a javascript entity-component-system for game and interactive media development.</p>
+		<p>imwd provides sane elementary building blocks for multimedia development, and provides workarounds and solutions for many common browser inconsistencies and inconveniences. It is designed to simplify getting a project off the ground while keeping things sustainable for longer development.</p>
+		
+	</div>
+	<hr>
+	<p>Common Issues:</p>
+	<hr>
+	<div class="quote">
+		<p>If the game doesn't respond to key presses, try clicking into the game "window" before pressing keys.</p>
+		<p>If the game doesn't run at all, you likely either need a better browser (try firefox or chrome for best compatibility), or to enable javascript.</p>
+		<p>No sound on Safari: take it up with Apple, Vorbis is free/open.</p>
+	</div>
+	<hr>
+        <br>
+        	<div class="help">
+		<br>
+		<hr>
+		<p>Help: </p>
+		<hr>
+		<p>
+			How to play the game.
+			The game plays by the use of the following keyboard keys.
+		</p>
+			<ul>
+				<li>
+					The web interface starts from the index page where the game initiates and the visualization is formed.
+				</li>
+				<li>
+					After the page s loaded one can use the up,left and right arrow to control the beetle to move arroung.
+				</li>
+				<li>
+					The r key is used to reset the game to an initial phase destroying the current game position.
+				</li>
+				<li>
+					the N button arrow is used when one wants to sho animation.
+				</li>
+				<li>
+					The T button is used to return the game to a starting point.
+				    A button is used to change between game options.
+				</li>
+				<li>
+					The "~`" keyboard key inside the quotes is used to show the current mouse position
+					and the FPS (frame per second) of the game.
+		</li>
+	</ul>
+
+	</div>
+
+	
+        
+</div>
+</body>
+</html>

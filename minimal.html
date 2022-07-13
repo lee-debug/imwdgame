@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	body, html {
+		/*invisible in iframe*/
+		background:none transparent;
+		padding: 0px;
+		margin: 0px;
+		overflow: hidden;
+	}
+	#canvas {
+		/* right in the corner */
+		position: absolute;
+		/* pixelated */
+		image-rendering: -moz-crisp-edges;
+		image-rendering: -o-crisp-edges;
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: pixelated;
+		image-rendering: crisp-edges;
+		-ms-interpolation-mode: nearest-neighbor;
+	}
+	</style>
+
+	<!-- utility stuff -->
+	<script src="./js/cores/util/util.js"></script>
+	<script src="./js/cores/util/vector.js"></script>
+	<script src="./js/cores/util/collection.js"></script>
+	<!-- media stuff -->
+	<script src="./js/cores/media/canvas.js"></script>
+	<script src="./js/cores/media/camera.js"></script>
+	<script src="./js/cores/media/files.js"></script>
+	<script src="./js/cores/media/images.js"></script>
+	<script src="./js/cores/media/audio.js"></script>
+	<!-- engine stuff -->
+	<script src="./js/cores/core/mouse.js"></script>
+	<script src="./js/cores/core/keyboard.js"></script>
+	<script src="./js/cores/core/system.js"></script>
+	<script src="./js/cores/core/entity.js"></script>
+	<script src="./js/cores/core/kernel.js"></script>
+	<script src="./js/cores/core/debug.js"></script>
+	<!-- systems stuff -->
+	<script src="./js/cores/systems/basics.js"></script>
+	<script src="./js/cores/systems/transform.js"></script>
+	<script src="./js/cores/systems/sprites.js"></script>
+	<script src="./js/cores/systems/animation.js"></script>
+	<script src="./js/cores/systems/tilemap.js"></script>
+	<script src="./js/cores/systems/physics.js"></script>
+	<!-- game stuff -->
+	<script src="./js/main.js"></script>
+
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		//handle scaling the canvas to fit its parent with letterboxing
+		window.addEventListener('resize', _resize_game_canvas_css, false);
+		window.addEventListener('load', _resize_game_canvas_css, false);
+	</script>
+</body>
+</html>
